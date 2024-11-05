@@ -108,6 +108,55 @@ function start_game() {
     }
     if (choice == 2){
         alert("you open the book and you see a phrase repeated in blood 3 times it reads 'you're next' you hear a noise and then the grim reaper appears behind you")
-        prompt("do you run into the garage do you go to the garage door(1) or to the right and hide behind something(2)")
+        let choice_2 = prompt("do you run into the garage do you go to the garage door(1) or to the right and hide behind something(2)")
+        if (choice_2 == 1){
+            alert("you run towards the garage door you try to pull it up and it's locked you turn around and then die to the grim reaper")
+            alert("GAME OVER!!!!!!")
+        }
+        if (choice_2 == 2) {
+            alert("you run and hide behind a tool box you hear the grim reaper slowly walking towards you, you find a bolt and a screwdriver on the ground and toss it to the other side of the room the grim reaper hears the sound turns his back and then you run straight out u see a beast")
+            let choice_3 = prompt("do you run straigt to the right and leave from the exit(1) or do you try to kill the beast with the screwdriver you found(2)")
+        }
     }
+   }
+
+
+   function menu(){
+    let message = `Hi! Please make a selection:
+    1 - Play
+    2 - Options
+    3 - DLC
+    4 - Check for Updates
+    5 - Exit
+    `
+    let selection = Number(prompt(message))
+    if (selection == 1){
+        alert("Let's play!")
+        let difficulty = +prompt(`select a difficulty
+            1 - Easy
+            2 - Medium
+            3 - Hard`)
+            alert("you selected:" + difficulty)
+                if (difficulty == 1){
+                    alert("You selected the easy route")
+                }
+                if (difficulty == 2){
+                    alert("Most people select medium")
+                }
+                if (difficulty == 3){
+                    alert("I see you like a challenge")
+                }
+    }
+        else if (selection == 2){
+            alert("You selected Options.")
+        }
+        else if (selection == 3){
+            alert("No new DLC at this time.")
+        }
+        else if (selection == 4){
+            alert("Everything is up to date.")
+        }
+        else if (selection == 5){
+            alert("Bye!")
+        }
    }
