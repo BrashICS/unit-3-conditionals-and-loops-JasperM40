@@ -140,13 +140,13 @@ function start_game() {
                 if (difficulty == 1){
                     alert("You selected the easy route")
                 }
-                if (difficulty == 2){
+                else if (difficulty == 2){
                     alert("Most people select medium")
                 }
-                if (difficulty == 3){
+                else if (difficulty == 3){
                     alert("I see you like a challenge")
                 }
-    }
+                 }
         else if (selection == 2){
             alert("You selected Options.")
         }
@@ -160,3 +160,56 @@ function start_game() {
             alert("Bye!")
         }
    }
+   function square_root(){
+if ((value > 0) && (value % 2 == 0)) {
+    return Math.sqrt(value);
+} else if (value < 0) {
+    return "Cannot take the square-root of a negative";
+} else {
+    return `${value} is neither even nor positive`;
+}
+}
+ 
+function is_number(num){
+    if (typeof(num) == "number"){
+         return true
+    }
+    else {
+         return false
+    }
+}
+function is_number_which_day(num){
+    if (typeof(num) == "number"){
+
+    }
+    else {
+         return `invaild type`
+    }
+}
+
+function which_day(n) {
+     if (n == 1){
+        return `Sunday`
+    }
+    else if (n == 2){
+        return `Monday`
+    }
+    else if (n == 3){
+        return `Tuesday`
+    }
+    else if (n == 4){
+        return `Wednesday`
+    }
+    else if (n == 5){
+        return `Thursday` 
+    }
+    else if (n == 6){
+        return `Friday` 
+    }
+    else if (n == 7){
+        return `Saturday`
+    }
+    else {
+        return `you put a invaild day of the week`
+    }
+}
