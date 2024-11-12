@@ -13,7 +13,7 @@
 
 /*** Event Listeners ***/
 
-
+document.getElementById("guess").addEventListener("click", guess_10)
 
 /*** Functions ***/
 
@@ -116,6 +116,9 @@ function start_game() {
         if (choice_2 == 2) {
             alert("you run and hide behind a tool box you hear the grim reaper slowly walking towards you, you find a bolt and a screwdriver on the ground and toss it to the other side of the room the grim reaper hears the sound turns his back and then you run straight out u see a beast")
             let choice_3 = prompt("do you run straigt to the right and leave from the exit(1) or do you try to kill the beast with the screwdriver you found(2)")
+            if (choice_3 == 1){
+                alert("you start sprinting for the exit the beast comes running after you, you're just fast enough to out run the beast ")
+            }
         }
     }
    }
@@ -211,5 +214,25 @@ function which_day(n) {
     }
     else {
         return `you put a invaild day of the week`
+    }
+}
+
+function guess_10(){
+    let rndnumber = randInt(1, 10)
+    console.log(rndnumber)
+    let user_input = +prompt("pick a number from 1 to 10")
+    if (rndnumber == user_input){
+        alert("You are correct!!!!")
+    }
+    else if (user_input > 10){
+        alert(`you didn't pick a number through 1-10, the number was: ${rndnumber}`)
+    }
+    else if(user_input < rndnumber){
+        alert(`your number was to low, the number was: ${rndnumber}`)    }
+    else if (user_input > rndnumber){
+        alert(`your number was to high, the number was: ${rndnumber}`)
+    }
+    else{
+        alert("there was a error!")
     }
 }
