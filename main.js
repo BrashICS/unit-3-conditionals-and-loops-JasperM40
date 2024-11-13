@@ -236,3 +236,28 @@ function guess_10(){
         alert("there was a error!")
     }
 }
+
+function average(n) {
+    let avg = 0
+    let count = 1
+    
+    while (count <= n){
+    avg += +prompt(`pleas enter value ${count}/${n}`)
+    count++
+    }
+    avg = round(avg / n, 1)
+    console.log(`the avgerage is ${avg}`)
+}
+
+function random_until(min, max, stop ){
+    if (stop > max || stop < min || max <= min){
+        return -1
+    }
+    let rnd = randInt(min, max)
+    while (rnd != stop){
+        console.log(rnd)
+        rnd = randInt(min, max)
+    }
+    return stop
+
+}
